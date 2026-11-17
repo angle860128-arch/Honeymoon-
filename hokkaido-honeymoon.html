@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hokkaido Travel Journal 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7ef;--card:#fffdf8;--line:#e6dccb;--ink:#4a382c;--sub:#8a7360;--blue:#d9e8f0;--blue2:#9fc0d4;--oat:#efe4d0;--acc:#6f9bb6;--m1:#c9dce8;--m2:#b3cddd;--m3:#f4f0e6;--warn:#b98a52;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e242a;--card:#272e35;--line:#3b454e;--ink:#efe6d8;--sub:#b5a793;--blue:#2d3f4e;--blue2:#5d8099;--oat:#342f28;--acc:#8db6cf;--m1:#34495a;--m2:#2b3d4b;--m3:#3a4650;--warn:#d4a86a}}
+:root[data-theme="dark"]{--bg:#1e242a;--card:#272e35;--line:#3b454e;--ink:#efe6d8;--sub:#b5a793;--blue:#2d3f4e;--blue2:#5d8099;--oat:#342f28;--acc:#8db6cf;--m1:#34495a;--m2:#2b3d4b;--m3:#3a4650;--warn:#d4a86a}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.75 "Noto Serif TC","Hiragino Mincho ProN","PMingLiU",serif;-webkit-font-smoothing:antialiased}
+.en{font-family:"Cormorant Garamond",Georgia,serif;letter-spacing:.14em}
+.hero{position:relative;min-height:92vh;overflow:hidden;background:linear-gradient(180deg,var(--blue) 0%,var(--bg) 100%);display:flex;flex-direction:column;justify-content:center;text-align:center;padding:72px 24px 150px}
+.hero svg.land{position:absolute;left:0;bottom:0;width:100%;height:42%}
+.hero h1{font-weight:400;font-size:clamp(30px,7vw,64px);line-height:1.15;margin:10px 0;letter-spacing:.18em}
+.hero .date{font-size:clamp(16px,3.4vw,24px);letter-spacing:.3em}
+.hero .sub{color:var(--sub);font-size:13px;letter-spacing:.3em;margin-top:18px}
+.hero .in{position:relative;z-index:2}
+.snow{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.snow i{position:absolute;top:-10px;width:5px;height:5px;border-radius:50%;background:#fff;opacity:.8;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(105vh) translateX(24px)}}
+@media (prefers-reduced-motion:reduce){.snow i{animation:none}}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+.intro{padding:56px 0 24px;text-align:center}
+.intro p{max-width:34em;margin:14px auto;color:var(--sub)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 6px}
+.stats b{display:block;font:600 26px "Cormorant Garamond",serif}
+.stats span{font-size:12px;color:var(--sub)}
+.snowman{display:block;margin:6px auto}
+nav{position:sticky;top:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav div{display:flex;gap:8px;overflow-x:auto;padding:10px 18px;max-width:900px;margin:0 auto;scrollbar-width:none}
+nav a{flex:none;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:3px 14px;font-size:13px;background:var(--card)}
+nav a.on{background:var(--blue2);color:#fff;border-color:var(--blue2)}
+.day{margin:34px 0;background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.dh{padding:22px 22px 16px;background:linear-gradient(135deg,var(--blue),var(--oat));display:flex;gap:16px;align-items:center}
+.dn{font:italic 400 54px/1 "Cormorant Garamond",serif;color:var(--acc);min-width:58px}
+.dh small{display:block;color:var(--sub);letter-spacing:.2em;font-size:12px}
+.dh h2{margin:0;font-weight:600;font-size:19px;letter-spacing:.06em}
+.stay{margin:0;padding:10px 22px;border-bottom:1px dashed var(--line);font-size:13.5px;color:var(--sub)}
+.stay b{color:var(--ink);font-weight:600}
+.tl{list-style:none;margin:0;padding:12px 22px 6px}
+.tl li{position:relative;padding:8px 0 8px 22px;border-left:1px solid var(--line);margin-left:6px}
+.tl li:before{content:"";position:absolute;left:-5px;top:17px;width:9px;height:9px;border-radius:50%;background:var(--card);border:2px solid var(--blue2)}
+.tl .t{display:block;font:600 14px "Cormorant Garamond",serif;letter-spacing:.12em;color:var(--acc)}
+.tl .x{display:block}
+.chip{display:inline-block;background:var(--oat);border-radius:10px;padding:1px 10px;font-size:12.5px;margin:4px 6px 0 0;color:var(--ink)}
+.chip.k{background:var(--blue)}
+.fl{display:inline-block;font-size:11.5px;color:var(--warn);border:1px solid var(--warn);border-radius:999px;padding:0 8px;margin-left:6px;text-decoration:none;white-space:nowrap}
+.mp{display:inline-block;margin:4px 6px 0 0;padding:0 11px;border:1px solid var(--blue2);border-radius:999px;background:var(--blue);color:var(--ink);font-size:12px;line-height:1.7;text-decoration:none;white-space:nowrap}
+.stay .mp{margin:0 0 0 8px}
+.note{margin:6px 22px 20px;font-size:13px;color:var(--sub)}
+h3.sec{font-weight:400;text-align:center;font-size:24px;margin:64px 0 6px}
+.lead{text-align:center;color:var(--sub);font-size:13.5px;margin:0 0 22px}
+.fx{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 18px}
+.fx label{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;align-items:flex-start;cursor:pointer}
+.fx label:last-child{border:0}
+.fx input{margin-top:6px;accent-color:var(--acc);width:17px;height:17px;flex:none}
+.fx input:checked+span{opacity:.5;text-decoration:line-through}
+.fx b{color:var(--warn);font-weight:600}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 18px;font-size:14px}
+.box h4{margin:0 0 6px;font:600 15px "Cormorant Garamond",serif;letter-spacing:.16em;color:var(--acc)}
+footer{text-align:center;color:var(--sub);padding:60px 18px 70px;font-size:13px}
+@media (min-width:720px){body{font-size:16px}.dh h2{font-size:22px}.tl{padding:14px 34px 8px}.stay,.note{padding-left:34px;margin-left:0}.dh{padding:26px 34px 18px}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="snow" id="snow"></div>
+<div class="in">
+<div class="en" style="font-size:13px;color:var(--sub)">HONEYMOON · 9 DAYS 8 NIGHTS</div>
+<h1 class="en">HOKKAIDO<br>TRAVEL JOURNAL</h1>
+<div class="date en">2026.12.14 — 2026.12.22</div>
+<div class="sub">北海道・九天八夜蜜月旅行手帳</div>
+</div>
+<svg class="land" viewBox="0 0 800 260" preserveAspectRatio="none" aria-hidden="true">
+<path style="fill:var(--m1)" d="M0 150 L120 70 L210 130 L320 40 L440 135 L560 60 L680 125 L800 80 V260 H0Z"/>
+<path style="fill:var(--m2)" d="M0 190 L150 120 L260 175 L400 100 L540 180 L670 130 L800 175 V260 H0Z"/>
+<path style="fill:var(--m3)" d="M0 225 Q200 195 400 220 T800 205 V260 H0Z"/>
+<path d="M320 40 L295 68 L312 62 L322 76 L336 60 L352 70Z M560 60 L538 84 L553 79 L563 90 L575 78 L588 86Z" style="fill:#fff;opacity:.85"/>
+</svg>
+</header>
+
+<nav><div id="nav"></div></nav>
+
+<main class="wrap">
+<section class="intro">
+<svg class="snowman" width="64" height="78" viewBox="0 0 64 78" aria-hidden="true"><circle cx="32" cy="55" r="20" fill="#fff" stroke="#9fc0d4" stroke-width="1.5"/><circle cx="32" cy="26" r="14" fill="#fff" stroke="#9fc0d4" stroke-width="1.5"/><circle cx="27" cy="23" r="1.6" fill="#4a382c"/><circle cx="37" cy="23" r="1.6" fill="#4a382c"/><path d="M32 27 L42 30 L32 31Z" fill="#c9a07a"/><path d="M19 38 Q32 46 45 38" stroke="#6f9bb6" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="32" cy="52" r="1.6" fill="#8a7360"/><circle cx="32" cy="60" r="1.6" fill="#8a7360"/></svg>
+<div class="en" style="color:var(--acc);font-size:14px">WINTER IN HOKKAIDO</div>
+<p>從新千歲機場出發，經過星野渡假村的雪地、札幌的燈樹與市集、洞爺湖畔的溫泉，把婚後第一趟旅行慢慢走成一本白色的手帳。</p>
+<div class="stats"><div><b>9</b><span>天</span></div><div><b>8</b><span>夜</span></div><div><b>5</b><span>個住宿</span></div><div><b>3</b><span>座城市</span></div></div>
+</section>
+
+<section class="grid" id="info"></section>
+
+<h3 class="sec">DAILY ITINERARY</h3>
+<p class="lead">每日行程</p>
+<div id="days"></div>
+
+<div class="fx" id="fx" hidden></div>
+</main>
+<footer><div class="en" style="font-size:15px">HOKKAIDO TRAVEL JOURNAL</div>沐涵 &amp; 立洋 · 2026.12<br><br><span style="cursor:pointer;text-decoration:underline" id="th">切換亮／暗色</span></footer>
+
+<script>
+var FL=[
+["兩間千歲住宿","第一天為 Chitose Station Hotel，第八天為千歲站前路線酒店，名稱不同，請確認是否為兩間不同飯店。"],
+["第八天時間銜接","11:00 退房＋午餐後 12:00 就要到 SnowWorld・Toya，請確認車程與用餐時間是否足夠。"],
+["租車取還時間不一致","租車訂單為 12/20 09:00 取車、12/22 09:00 還車；但行程寫 12/20 09:30 出發、12/21 下午開車返回並還車。請確認以哪個為準。若 12/22 才還車，需確認千歲站前路線酒店停車，且 12/22 要先還車再趕 11:55 航班。"]
+];
+var D=[
+{d:"12.14 MON",t:"抵達北海道・千歲",s:"JR千歲旅館（JRイン千歳）",
+ c:["IT234","桃園 T1 06:20 → 新千歲 10:55","行李 各 20kg","座位 1A、1B"],
+ i:[["06:30 – 12:30","飛機上／抵達北海道"],["12:30 – 13:30","飯店放行李／午餐：Soup Curry GARAKU"],["14:30 – 16:30","唐吉訶德 千歲店"],["16:30 – 18:00","逛 AEON ＋ 附近吃晚餐"],["18:30 – 19:00","回飯店"]]},
+{d:"12.15 TUE",t:"星野渡假村 TOMAMU",s:"星野度假村 RISONARE Tomamu",
+ c:["Ozora 1","南千歲 07:20 → TOMAMU 08:26","指定席 3 號車 1番 C、D","Hal 訂位 18704"],
+ i:[["07:20 – 08:26","搭乘 JR 前往 TOMAMU"],["09:30 – 17:00","星野渡假村，體驗飯店各項設施"],["17:45","渡假村內 Hal 餐廳晚餐（訂位號碼 18704）<br>位置：Tomamu The Tower 一樓"]]},
+{d:"12.16 WED",t:"滑雪日・前往札幌",s:"MYSTAYS 札幌中島公園",
+ c:["滑雪課程訂位 80611","Ozora 8","TOMAMU 16:35 → 札幌 18:16","指定席 4 號車 2番 C、D"],
+ i:[["07:00 – 08:00","吃早餐"],["08:00 – 15:00","全天滑雪行程（課程訂位號碼 80611）"],["16:00","搭星野接泊車去車站（約 10 分鐘）"],["16:35 – 18:16","搭乘 JR 前往札幌（Ozora 8：TOMAMU → 札幌）"],["19:00","入住飯店、自由活動"],["20:00","晚餐隨興安排"]]},
+{d:"12.17 THU",t:"Klook 一日遊",s:"MYSTAYS 札幌中島公園",
+ c:["Klook 一日遊","札幌站北口集合 11:30"],
+ i:[["09:00","早餐：客美多咖啡 大通西二丁目店"],["10:30","DONGURI 買麵包"],["11:30","札幌站北口集合"],["景點順序","四季彩之丘 → 聖誕樹 → 白鬚瀑布 → 白金青池 → 森林精靈露台"],["22:30","預計結束，車程返回，札幌站北口下車"]]},
+{d:"12.18 FRI",t:"札幌市區・燈樹節",s:"MYSTAYS 札幌中島公園",
+ c:["白色燈樹節","慕尼黑聖誕市集"],
+ i:[["08:30","早餐：二條市場"],["上午","諏訪神社 － 北海道大學 － 北海道神宮"],["午餐","北海道海鮮居酒屋 さぶろう（時間隨興）"],["下午","白色戀人工廠 － 札幌電視塔"],["晚上","狸小路逛街 ＋ 札幌白色燈樹節 ＋ 札幌慕尼黑聖誕市集"]]},
+{d:"12.19 SAT",t:"雪之摩艾・藻岩山夜景",s:"MYSTAYS 札幌中島公園",
+ c:["地下鐵","藻岩山夜景 17:00"],
+ i:[["09:00","薄野站搭地下鐵"],["10:00","瀧野靈園下車：雪之摩艾 ＋ 頭大佛"],["13:30","COCONO SUSUKINO"],["16:30","bakery harry ベーカリーハリー 買麵包"],["17:00","藻岩山夜景"],["午餐","隨興安排"],["20:00","晚餐：旭川成吉思汗大黑屋茶室 2號店（訂位 37256）"]]},
+{d:"12.20 SUN",t:"租車・前往洞爺湖",s:"湖景TOYA乃之風渡假酒店",
+ c:["租車訂單 50253325","新千歲機場取車 09:00","相川 View Point 停 20 分"],
+ i:[["09:00","新千歲機場取車出發（訂單確認碼 50253325）"],["沿途","相川ビューポイントパーキング 停留 20 分鐘拍照"],["中午","抵達乃之風停車，前往溫泉街午餐"],["下午","乃之風飯店設施"],["17:00 後","直接前往已訂位的餐廳用餐"]]},
+{d:"12.21 MON",t:"溫泉・雪地摩托・回千歲",s:"KOKO STAY Chitose",
+ c:["SnowWorld・Toya","雪地摩托 12:00 – 14:30"],
+ i:[["08:00","早餐"],["09:00","泡湯放鬆"],["11:00","飯店退房、吃午餐"],["12:00 – 14:30","SnowWorld・Toya 雪地摩托"],["下午至傍晚","開車返回千歲（飯店有停車場）"],["18:30","飯店 check in"],["晚上","晚餐：AEON 處理"]]},
+{d:"12.22 TUE",t:"候機・返回台灣",s:"（當天返程）",
+ c:["IT235","新千歲 11:55 → 桃園 T1 15:35","沐涵 25kg・立洋 30kg","座位 2A、2B 優先行李"],
+ i:[["09:00","還車（訂單 50253325）"],["白天","候機時間"],["11:55 – 15:35","搭機返回：新千歲 → 桃園 T1（IT235）"]]}
+];
+var nav=document.getElementById("nav"),days=document.getElementById("days");
+D.forEach(function(o,n){
+ nav.innerHTML+='<a href="#d'+(n+1)+'">Day '+(n+1)+'</a>';
+ var li=o.i.map(function(r){return '<li><span class="t">'+r[0]+'</span><span class="x">'+r[1]+(r[2]!=null?'<a class="fl" href="#flags">待確認</a>':'')+'</span></li>'}).join("");
+ var ch=o.c.map(function(c,k){return '<span class="chip'+(k?'':' k')+'">'+c+'</span>'}).join("");
+ days.innerHTML+='<article class="day" id="d'+(n+1)+'"><div class="dh"><div class="dn">'+(n+1)+'</div><div><small class="en">'+o.d+'</small><h2>'+o.t+'</h2></div></div><p class="stay">住宿｜<b>'+o.s+'</b></p><ul class="tl">'+li+'</ul><p class="note">'+ch+'</p></article>';
+});
+document.getElementById("info").innerHTML=
+'<div class="box"><h4>FLIGHTS</h4>去程 IT234｜12/14 桃園 T1 06:20 → 新千歲 10:55<br>回程 IT235｜12/22 新千歲 11:55 → 桃園 T1 15:35</div>'+
+'<div class="box"><h4>BOOKINGS</h4>Hal 餐廳 18704<br>滑雪課程 80611<br>租車訂單 50253325<br>旭川成吉思汗大黑屋茶室 2號店 37256</div>'+
+'<div class="box" style="grid-column:1/-1"><h4>CAR RENTAL</h4><div style="display:flex;flex-wrap:wrap;gap:4px 30px"><span>取車｜2026/12/20（日）09:00</span><span>還車｜2026/12/22（二）09:00</span><span>新千歲機場取車</span><span>8-9-8 Aoba, Chitose-shi, Hokkaido 066-0015</span><span>電話 +81123224040 / +819015214040</span></div></div>'+
+'<div class="box" style="grid-column:1/-1"><h4>STAYS</h4>'+[["12/14","JR千歲旅館（JRイン千歳）","6148.928.356","7233"],["12/15","星野度假村 RISONARE Tomamu","17vsw5qciv","d1e2e1"],["12/16 – 12/19","MYSTAYS 札幌中島公園酒店","5144.937.622","7799"],["12/20","湖景TOYA乃之風渡假酒店","TC2E7110542FC","無"],["12/21","KOKO STAY Chitose（有停車場）","6393.844.558","2996"]].map(function(h){return '<div style="padding:8px 0;border-top:1px dashed var(--line)"><span class="en" style="color:var(--acc)">'+h[0]+'</span>　<b>'+h[1]+'</b><br><span style="color:var(--sub);font-size:13px">預訂號碼 '+h[2]+'　密碼 '+h[3]+'</span></div>'}).join("")+'</div>';
+var S={};try{S=JSON.parse(localStorage.getItem("hk")||"{}")}catch(e){}
+var fx=document.getElementById("fx");
+FL.forEach(function(f,i){fx.innerHTML+='<label><input type="checkbox" data-i="'+i+'"'+(S[i]?' checked':'')+'><span><b>'+f[0]+'</b>　'+f[1]+'</span></label>'});
+fx.addEventListener("change",function(e){S[e.target.dataset.i]=e.target.checked;try{localStorage.setItem("hk",JSON.stringify(S))}catch(x){}});
+var G="https://www.google.com/maps/search/?api=1&query=";
+var MP=[[1,"@stay","","JRイン千歳"],[1,"唐吉訶德","","ドン・キホーテ千歳店"],[1,"AEON","","イオン千歳店"],
+[3,"@stay","","ホテルマイステイズ札幌中島公園"],
+[4,"@stay","","ホテルマイステイズ札幌中島公園"],[4,"客美多","","コメダ珈琲店 札幌大通西2丁目店"],[4,"DONGURI","","どんぐり 札幌 パン"],
+[5,"@stay","","ホテルマイステイズ札幌中島公園"],[5,"二條市場","","二条市場 札幌"],[5,"諏訪神社","諏訪神社","札幌 諏訪神社"],[5,"諏訪神社","北海道大學","北海道大学"],[5,"諏訪神社","北海道神宮","北海道神宮"],[5,"さぶろう","","北海道海鮮居酒屋 さぶろう 札幌"],[5,"白色戀人工廠","白色戀人工廠","白い恋人パーク"],[5,"白色戀人工廠","電視塔","さっぽろテレビ塔"],[5,"狸小路","狸小路","狸小路商店街"],[5,"狸小路","白色燈樹節","さっぽろホワイトイルミネーション 大通公園"],[5,"狸小路","聖誕市集","ミュンヘン・クリスマス市 in Sapporo 大通公園"],
+[6,"@stay","","ホテルマイステイズ札幌中島公園"],[6,"薄野站","","すすきの駅"],[6,"瀧野靈園","","滝野霊園"],[6,"COCONO","","COCONO SUSUKINO"],[6,"bakery harry","","ベーカリーハリー 札幌"],[6,"藻岩山","纜車入口","もいわ山ロープウェイ ロープウェイ入口駅"],[6,"旭川成吉思汗","","旭川成吉思汗 大黒屋 札幌 2号店"],
+[7,"@stay","","湖畔 TOYA 乃之風リゾート"],[7,"相川","","相川ビューポイントパーキング"],
+[8,"@stay","","KOKO STAY 千歳"],[8,"SnowWorld","","スノーワールド洞爷 SnowWorld Toya"],[8,"AEON","","イオン千歳店"]];
+var tg=[];
+MP.forEach(function(m){var a=document.getElementById("d"+m[0]);if(!a)return;var el=m[1]==="@stay"?a.querySelector(".stay"):[].filter.call(a.querySelectorAll(".tl .x"),function(x){return x.textContent.indexOf(m[1])>-1})[0];if(el)tg.push([el,m])});
+tg.forEach(function(p){var n=tg.filter(function(q){return q[0]===p[0]}).length,b=document.createElement("a");b.className="mp";b.href=G+encodeURIComponent(p[1][3]);b.target="_blank";b.rel="noopener";b.textContent="↗ "+(n>1&&p[1][2]?p[1][2]:"Google Map");p[0].appendChild(b)});
+var sn=document.getElementById("snow");
+for(var i=0;i<38;i++){var s=document.createElement("i");s.style.left=Math.random()*100+"%";var z=3+Math.random()*5;s.style.width=s.style.height=z+"px";s.style.animationDuration=7+Math.random()*9+"s";s.style.animationDelay=-Math.random()*12+"s";sn.appendChild(s)}
+var links=nav.querySelectorAll("a");
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-30% 0px -60% 0px"});document.querySelectorAll(".day").forEach(function(d){io.observe(d)})}
+document.getElementById("th").onclick=function(){var r=document.documentElement,dk=matchMedia("(prefers-color-scheme:dark)").matches;var cur=r.dataset.theme||(dk?"dark":"light");r.dataset.theme=cur==="dark"?"light":"dark"};
+</script>
+</body>
+</html>
