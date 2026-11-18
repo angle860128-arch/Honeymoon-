@@ -1,10 +1,10 @@
-
-const CACHE_NAME = 'hokkaido-journal-v1';
+const CACHE_NAME = 'hokkaido-journal-v2';
 
 const FILES_TO_CACHE = [
   './',
   './index.html',
-  './manifest.json'
+  './manifest.json',
+  './apple-touch-icon.png'
 ];
 
 // 安裝時先儲存網站基本資料
