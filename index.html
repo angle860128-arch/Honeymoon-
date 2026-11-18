@@ -231,6 +231,9 @@ var MP=[[1,"@stay","","JRイン千歳"],[1,"唐吉訶德","","ドン・キホー
 var tg=[];
 MP.forEach(function(m){var a=document.getElementById("d"+m[0]);if(!a)return;var el=m[1]==="@stay"?a.querySelector(".stay"):[].filter.call(a.querySelectorAll(".tl .x"),function(x){return x.textContent.indexOf(m[1])>-1})[0];if(el)tg.push([el,m])});
 tg.forEach(function(p){var n=tg.filter(function(q){return q[0]===p[0]}).length,b=document.createElement("a");b.className="mp";b.href=G+encodeURIComponent(p[1][3]);b.target="_blank";b.rel="noopener";b.textContent="↗ "+(n>1&&p[1][2]?p[1][2]:"Google Map");p[0].appendChild(b)});
+try{history.scrollRestoration="manual"}catch(x){}
+nav.addEventListener("click",function(e){var a=e.target.closest("a");if(!a)return;e.preventDefault();var t=document.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth"})});
+window.addEventListener("load",function(){try{history.replaceState(null,"",location.pathname+location.search)}catch(x){}window.scrollTo({top:0,behavior:"instant"})});
 var sn=document.getElementById("snow");
 for(var i=0;i<38;i++){var s=document.createElement("i");s.style.left=Math.random()*100+"%";var z=3+Math.random()*5;s.style.width=s.style.height=z+"px";s.style.animationDuration=7+Math.random()*9+"s";s.style.animationDelay=-Math.random()*12+"s";sn.appendChild(s)}
 var links=nav.querySelectorAll("a");
