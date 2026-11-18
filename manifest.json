@@ -1,0 +1,13 @@
+
+{
+  "name": "Hokkaido Travel Journal 2026",
+  "short_name": "北海道蜜月",
+  "description": "Hannah & Leon 北海道九天八夜蜜月旅行手帳",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fbf7ef",
+  "theme_color": "#d9e8f0",
+  "lang": "zh-TW"
+}
