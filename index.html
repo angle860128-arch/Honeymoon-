@@ -105,35 +105,11 @@ h3.sec{font-weight:400;text-align:center;font-size:24px;margin:64px 0 6px}
 .box h4{margin:0 0 6px;font:600 15px "Cormorant Garamond",serif;letter-spacing:.16em;color:var(--acc)}
 footer{text-align:center;color:var(--sub);padding:60px 18px 70px;font-size:13px}
 @media (min-width:720px){body{font-size:16px}.dh h2{font-size:22px}.tl{padding:14px 34px 8px}.stay,.note{padding-left:34px;margin-left:0}.dh{padding:26px 34px 18px}}
-/* 開場畫面 */
-#splash-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #1d3040;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-  transition: opacity 0.8s ease;
-}
 
-#splash-screen img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#splash-screen.hide {
-  opacity: 0;
-  pointer-events: none;
-}
 </style>
 </head>
 <body>
- <div id="splash-screen">
-  <img src="./splash-screen.jpg" alt="Hokkaido Travel Journal">
-</div>
+
 <header class="hero">
 <div class="snow" id="snow"></div>
 <div class="in">
@@ -275,21 +251,6 @@ for(var i=0;i<38;i++){var s=document.createElement("i");s.style.left=Math.random
 var links=nav.querySelectorAll("a");
 </script>
 
-<script>
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    var splash = document.getElementById('splash-screen');
-
-    if (splash) {
-      splash.classList.add('hide');
-
-      setTimeout(function() {
-        splash.remove();
-      }, 800);
-    }
-  }, 1500);
-});
-</script>
  <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
