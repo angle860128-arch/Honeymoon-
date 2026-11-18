@@ -2,6 +2,15 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
+ <link rel="manifest" href="./manifest.json">
+
+<meta name="theme-color" content="#d9e8f0">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Hokkaido">
+
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hokkaido Travel Journal 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -239,6 +248,13 @@ for(var i=0;i<38;i++){var s=document.createElement("i");s.style.left=Math.random
 var links=nav.querySelectorAll("a");
 if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-30% 0px -60% 0px"});document.querySelectorAll(".day,#taxp,#taxf").forEach(function(d){io.observe(d)})}
 document.getElementById("th").onclick=function(){var r=document.documentElement,dk=matchMedia("(prefers-color-scheme:dark)").matches;var cur=r.dataset.theme||(dk?"dark":"light");r.dataset.theme=cur==="dark"?"light":"dark"};
+</script>
+ <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./service-worker.js');
+  });
+}
 </script>
 </body>
 </html>
