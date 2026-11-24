@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hokkaido-journal-v2';
+const CACHE_NAME = 'hokkaido-journal-v3';
 
 const FILES_TO_CACHE = [
   './',
@@ -7,7 +7,7 @@ const FILES_TO_CACHE = [
   './apple-touch-icon.png'
 ];
 
-// 安裝時先儲存網站基本資料
+// 安裝新版快取
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -16,7 +16,7 @@ self.addEventListener('install', event => {
   );
 });
 
-// 啟用新版快取
+// 啟用新版並清除舊快取
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
@@ -29,7 +29,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// 優先使用已儲存的網站內容
+// HTML 優先取得網路最新版，離線時才使用快取
 self.addEventListener('fetch', event => {
   const request = event.request;
 
@@ -37,6 +37,22 @@ self.addEventListener('fetch', event => {
     request.method !== 'GET' ||
     new URL(request.url).origin !== self.location.origin
   ) return;
+
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then(response => {
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME)
+              .then(cache => cache.put('./index.html', copy));
+          }
+          return response;
+        })
+        .catch(() => caches.match('./index.html'))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(request).then(cached => {
@@ -49,10 +65,6 @@ self.addEventListener('fetch', event => {
             .then(cache => cache.put(request, copy));
         }
         return response;
-      }).catch(() => {
-        if (request.mode === 'navigate') {
-          return caches.match('./index.html');
-        }
       });
     })
   );
